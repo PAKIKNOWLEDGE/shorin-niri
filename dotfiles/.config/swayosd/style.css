@@ -4,7 +4,7 @@
 window#osd {
     background: none;
     padding: 1em;
-    margin-bottom: 12em 6em 6em 6em; 
+    margin: 12em 6em 6em 6em; 
 }
 
 /* 2. 核心容器 */

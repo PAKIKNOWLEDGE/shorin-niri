@@ -104,7 +104,7 @@ spawn-at-startup "fcitx5"
 // 剪贴板历史
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 
-// OSD 显示
+// OSD 显示 (音量/亮度/大小写)
 spawn-at-startup "swayosd-server"
 
 // 闲置锁屏 + 休眠前自动锁屏

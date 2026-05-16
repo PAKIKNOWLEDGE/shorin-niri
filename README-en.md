@@ -40,7 +40,7 @@ Full keybinding layout, window rules, workspace logic and visual design are **pr
 | `polkit-kde` required (Fedora) | Fedora removed polkit-gnome; config spawns both paths, missing one fails silently |
 | `xorg-xwayland` → `xorg-x11-server-Xwayland` | Package name changed on Fedora 44+ |
 | `xorg-xprop` → `xprop` | Package name changed on Fedora 44+ |
-| `swayosd` COPR added (`phynecs/swayosd`) | Not in Fedora main repos |
+| `swayosd` COPR added (`phynecs/swayosd`) + libinput backend systemd service | Caps-Lock OSD requires `sudo systemctl enable --now swayosd-libinput-backend.service` |
 | Waybar style.css updated | Replaced old `#custom-actions` with `#custom-colorize` |
 | Wallpaper backend confirmed as `swaybg` | Used by waypaper; no extra daemons |
 

@@ -40,7 +40,7 @@
 | `polkit-kde` 替代 polkit-gnome | Fedora 已移除 polkit-gnome |
 | `xorg-xwayland` → `xorg-x11-server-Xwayland` | Fedora 44+ 包名变更 |
 | `xorg-xprop` → `xprop` | Fedora 44+ 包名变更 |
-| 新增 `phynecs/swayosd` COPR | swayosd 不在 Fedora 官方源 |
+| 新增 `phynecs/swayosd` COPR + libinput 后端 systemd 服务 | 大小写 OSD 需要 `sudo systemctl enable --now swayosd-libinput-backend.service` |
 | waybar style.css 更新 | `#custom-actions` 替换为 `#custom-colorize` |
 | 壁纸后端确认为 `swaybg` | 无常驻守护进程 |
 
