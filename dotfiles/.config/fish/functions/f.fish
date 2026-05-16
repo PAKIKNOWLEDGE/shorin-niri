@@ -100,7 +100,7 @@ function f
 
     # 抛弃脆弱的 1.1.1.1，使用苹果的全球探针节点，并使用 -I 极限提速
     function check_network
-        curl -sI --connect-timeout 2 "http://captive.apple.com/hotspot-detect.html" >/dev/null 2>&1
+        curl -sI -x http://127.0.0.1:7897 --connect-timeout 2 "http://captive.apple.com/hotspot-detect.html" >/dev/null 2>&1
         return $status
     end
     
@@ -111,11 +111,11 @@ function f
         # === SFW 正常 API ===
         switch $RAND
             case 1
-                curl -s $TIMEOUT "https://api.waifu.im/images?IncludedTags=waifu&IsNsfw=false" | jq -r '.images[0].url'
+                curl -s -x http://127.0.0.1:7897 $TIMEOUT "https://api.waifu.im/images?IncludedTags=waifu&IsNsfw=false" | jq -r '.images[0].url'
             case 2
-                curl -s $TIMEOUT "https://nekos.best/api/v2/waifu" | jq -r '.results[0].url'
+                curl -s -x http://127.0.0.1:7897 $TIMEOUT "https://nekos.best/api/v2/waifu" | jq -r '.results[0].url'
             case 3
-                curl -s $TIMEOUT "https://api.waifu.pics/sfw/waifu" | jq -r '.url'
+                curl -s -x http://127.0.0.1:7897 $TIMEOUT "https://api.waifu.pics/sfw/waifu" | jq -r '.url'
         end
     end
     
@@ -126,7 +126,7 @@ function f
             set -l FILENAME "waifu_"(date +%s%N)"_"(random)".jpg"
             set -l TARGET_PATH "$CACHE_DIR/$FILENAME"
             
-            curl -s -L --connect-timeout 5 --max-time 15 -o "$TARGET_PATH" "$URL"
+            curl -s -L -x http://127.0.0.1:7897 --connect-timeout 5 --max-time 15 -o "$TARGET_PATH" "$URL"
             
             # 简单校验
             if test -s "$TARGET_PATH"
