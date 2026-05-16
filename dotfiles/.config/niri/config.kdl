@@ -92,9 +92,6 @@ spawn-sh-at-startup "sleep 1 && waypaper --restore"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "/usr/lib/polkit-kde/polkit-kde-authentication-agent-1"
 
-// 屏幕分享 Portal
-spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri"
-
 // 通知守护
 spawn-at-startup "mako"
 
