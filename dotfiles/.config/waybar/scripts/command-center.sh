@@ -1,4 +1,4 @@
 #!/bin/bash
-# [已移除] 此脚本包含发行版专属命令，已在 Slim 版中移除。
-# [Removed] This script contained distro-specific commands and has been removed.
+# [已移除] Arch 专属命令中心，Fedora 下不用
+echo "Command Center removed for Fedora."
 exit 0

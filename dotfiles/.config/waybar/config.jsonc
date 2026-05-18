@@ -15,8 +15,10 @@
         // "ext/workspaces",
         "niri/workspaces",
         "custom/right_div#5",
-        //"cffi/niri-taskbar",
+        //"cffi/niri-taskbar", //需要安装waybar-niri-taskbar-git
         "niri/window",
+        //"dwl/window",
+        // "hyprland/window",
         "custom/right_div#6"
     ],
     "modules-center": [
@@ -34,9 +36,13 @@
         "custom/right_div#11",
         "clock",
         "custom/right_div#2",
+        //"clock#date",
+        //  "mpris",
         "custom/right_div#3"
+        //"custom/right_div#4",
     ],
     "modules-right": [
+        // "group/backlight",
         "custom/left_div#7",
         "tray",
         "custom/left_div#4",
